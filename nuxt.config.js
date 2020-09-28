@@ -57,6 +57,16 @@ export default {
     '@nuxt/content'
   ],
 
+  generate: {
+    // Crawl nuxt content pages for statig generation at build time
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content({ deep: true }).only(['path']).fetch()
+
+      return files.map(file => file.path === '/index' ? '/' : file.path)
+    }
+  },
+
   // Content module configuration (https://go.nuxtjs.dev/content-config)
   content: {},
 
