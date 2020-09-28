@@ -58,7 +58,7 @@ export default {
   ],
 
   generate: {
-    // Crawl nuxt content pages for statig generation at build time
+    // Crawl nuxt content pages for static generation at build time
     async routes () {
       const { $content } = require('@nuxt/content')
       const files = await $content({ deep: true }).only(['path']).fetch()
