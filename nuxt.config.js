@@ -1,75 +1,55 @@
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
-  // Target (https://go.nuxtjs.dev/config-target)
+  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers (https://go.nuxtjs.dev/config-head)
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'bastiennicoud',
+    title: 'Bastien Nicoud',
     meta: [
       { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: ''
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: 'favicon.png'
-      }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: 'favicon.png' },
+    ],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: ['@/assets/styles/app.scss'],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
+  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
   ],
 
-  generate: {
-    // Crawl nuxt content pages for static generation at build time
-    async routes () {
-      const { $content } = require('@nuxt/content')
-      const files = await $content({ deep: true }).only(['path']).fetch()
-
-      return files.map(file => file.path === '/index' ? '/' : file.path)
-    }
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      name: 'Bastien Nicoud',
+      short_name: 'BN',
+      description: 'Welcome to my personal website.',
+      lang: 'en',
+    },
   },
 
-  // Content module configuration (https://go.nuxtjs.dev/content-config)
-  content: {},
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 }
