@@ -25,10 +25,10 @@ jobs:
       - name: Build
         run: yarn generate
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: ftp://bastiennicoud.ch/
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist
+          local-dir: ./dist/
           git-ftp-args: --all
