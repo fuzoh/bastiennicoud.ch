@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        Bastien Nicoud
-      </h1>
+      <h1 class="title">Bastien Nicoud</h1>
       <p>En construction</p>
     </div>
   </div>
@@ -25,11 +23,7 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Helvetica Neue',
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
   display: block;
   font-size: 68px;
 }
