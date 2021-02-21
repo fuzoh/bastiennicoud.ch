@@ -1,4 +1,4 @@
-# bastiennicoud
+# Personal website
 
 ## Build Setup
 
