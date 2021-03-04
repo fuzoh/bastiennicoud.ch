@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav>
-      <div>
-        <nuxt-link to="/">Bastien Nicoud</nuxt-link>
+      <div class="nav_brand">
+        <nuxt-link class="brand" to="/">Bastien Nicoud</nuxt-link>
       </div>
       <div class="nav_menu">
         <div>

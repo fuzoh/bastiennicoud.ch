@@ -1,7 +1,16 @@
 // ----------------
 // Reset properties
 
+* {
+  font-family: "Rubik";
+}
+
 html, body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  columns: inherit;
+  text-decoration: none;
 }
