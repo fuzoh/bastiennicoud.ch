@@ -3,6 +3,7 @@
 
 * {
   font-family: "Rubik";
+  color: var(--text-color);
 }
 
 html, body {
@@ -14,5 +15,5 @@ html, body {
 a {
   columns: inherit;
   text-decoration: none;
-  color: #000;
+  color: var(--text-color);
 }
