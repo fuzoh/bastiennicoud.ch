@@ -1,16 +1,16 @@
 <template>
   <main>
-    <div class="main_left">
+    <div class="main_grid_box main_left">
       <h1>Hello</h1>
     </div>
-    <div class="main_right_up">
+    <a class="main_grid_box main_right_up">
       <h1>Hello</h1>
-    </div>
-    <div class="main_right_middle">
+    </a>
+    <a class="main_grid_box main_right_middle">
       <h1>Hello</h1>
-    </div>
-    <div class="main_right_down">
+    </a>
+    <a class="main_grid_box main_right_down">
       <h1>Hello</h1>
-    </div>
+    </a>
   </main>
 </template>
