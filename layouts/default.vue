@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="__default_layout">
     <nav>
       <div class="nav_brand">
         <nuxt-link class="brand" :to="localePath('/')">

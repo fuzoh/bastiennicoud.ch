@@ -1,6 +1,21 @@
 // ----------------
 // Layout rules
 
+// Global layout
+#__nuxt {
+  min-height: 100vh;
+}
+
+#__layout {
+  min-height: 100vh;
+}
+
+#__default_layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 // Navigation
 nav {
   height: 96px;
@@ -23,4 +38,42 @@ nav {
 
 .nav_link {
   margin-left: 16px;
+}
+
+a {
+  transition: all 0.6s ease-in-out;
+}
+
+a:hover {
+  color: #4834d4;
+}
+
+// Main container
+main {
+  padding: 24px;
+  display: grid;
+  height: 100%;
+  gap: 24px 24px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "left right-up"
+    "left right-middle"
+    "left right-down";
+}
+
+.main_left {
+  grid-area: left;
+}
+
+.main_right_up {
+  grid-area: right-up;
+}
+
+.main_right_middle {
+  grid-area: right-middle;
+}
+
+.main_right_down {
+  grid-area: right-down;
 }
