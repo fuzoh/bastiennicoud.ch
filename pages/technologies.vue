@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="main_grid_box main_all">
-      <h1>Hello les amis</h1>
+      <h1>Technologies</h1>
     </div>
   </main>
 </template>

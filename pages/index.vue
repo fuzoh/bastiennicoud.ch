@@ -1,16 +1,22 @@
 <template>
   <main>
     <div class="main_grid_box main_left">
-      <h1>Hello</h1>
+      <my-abstract></my-abstract>
     </div>
-    <a class="main_grid_box main_right_up">
+    <nuxt-link class="main_grid_box main_right_up" :to="localePath('/skills')">
       <h1>Hello</h1>
-    </a>
-    <a class="main_grid_box main_right_middle">
+    </nuxt-link>
+    <nuxt-link
+      class="main_grid_box main_right_middle"
+      :to="localePath('/technologies')"
+    >
       <h1>Hello</h1>
-    </a>
-    <a class="main_grid_box main_right_down">
+    </nuxt-link>
+    <nuxt-link
+      class="main_grid_box main_right_down"
+      :to="localePath('/contact')"
+    >
       <h1>Hello</h1>
-    </a>
+    </nuxt-link>
   </main>
 </template>
